@@ -19,7 +19,6 @@ redirect_from:
   <div class="cv__head cv__sub"><span>M.A. in <em>Psychology</em> – Quantitative Psychology (concurrent degree with Ph.D.)</span></div>
   <div class="cv__head cv__sub"><span>B.A. in <em>Psychology</em> – Distinguished Majors Program<br>Minor in <em>Data Science</em></span><span class="cv__date">August 2023 – May 2026</span></div>
   <dl class="cv__details">
-    <dt>GPA</dt><dd>3.883/4.000</dd>
     <dt>Honors</dt><dd>Distinguished Majors Program, 2025–26<br>Dean’s List (all semesters)<br>Graduating in 3 years</dd>
   </dl>
 </div>

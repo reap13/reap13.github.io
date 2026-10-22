@@ -19,7 +19,9 @@
 .cv .cv__section {
   margin: 2em 0 0.75em;
   padding-bottom: 0.2em;
-  border-bottom: 1px solid var(--global-text-color);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--accent-primary), var(--accent-warm)) 1;
+  color: var(--accent-primary);
   font-size: $type-size-5;
   font-weight: bold;
   letter-spacing: 0.04em;
@@ -27,7 +29,22 @@
 }
 
 .cv__entry {
+  position: relative;
   margin-bottom: 1.25em;
+  padding-left: 1.1em;
+  border-left: 2px solid var(--surface-border);
+
+  /* dot on the timeline rail */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.45em;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
 }
 
 /* name and place on the left, dates on the right */
@@ -44,6 +61,7 @@
 }
 
 .cv__date {
+  color: var(--accent-primary);
   font-style: italic;
   font-weight: bold;
   white-space: nowrap;

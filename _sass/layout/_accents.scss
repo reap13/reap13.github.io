@@ -1,0 +1,324 @@
+/* ==========================================================================
+   ACCENTS
+   Site-wide colour palette and card styling layered on the default theme
+   ========================================================================== */
+
+:root {
+  --accent-primary            : #4f46e5;
+  --accent-primary-strong     : #3730a3;
+  --accent-warm               : #e76f51;
+  --accent-teal               : #0f8b7f;
+  --accent-tint               : #eceefd;
+  --accent-warm-tint          : #fcebe5;
+  --accent-teal-tint          : #e2f4f1;
+  --surface                   : #ffffff;
+  --surface-border            : #e7e3da;
+  --shadow                    : 0 1px 2px rgba(30, 27, 60, 0.05), 0 4px 14px rgba(30, 27, 60, 0.06);
+  --shadow-hover              : 0 2px 4px rgba(30, 27, 60, 0.06), 0 12px 28px rgba(30, 27, 60, 0.12);
+
+  --global-base-color         : var(--accent-primary);
+  --global-bg-color           : #faf8f4;
+  --global-footer-bg-color    : #f1ede5;
+  --global-border-color       : var(--surface-border);
+  --global-link-color         : var(--accent-primary);
+  --global-link-color-hover   : var(--accent-primary-strong);
+  --global-link-color-visited : var(--accent-primary);
+  --global-masthead-link-color-hover : var(--accent-primary);
+  --global-text-color         : #2b2d33;
+  --global-text-color-light   : #6b6f78;
+}
+
+html[data-theme="dark"] {
+  --accent-primary            : #a5b4fc;
+  --accent-primary-strong     : #c7d2fe;
+  --accent-warm               : #f4a261;
+  --accent-teal               : #5eead4;
+  --accent-tint               : rgba(165, 180, 252, 0.13);
+  --accent-warm-tint          : rgba(244, 162, 97, 0.14);
+  --accent-teal-tint          : rgba(94, 234, 212, 0.12);
+  --surface                   : #212737;
+  --surface-border            : #323a4f;
+  --shadow                    : 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.22);
+  --shadow-hover              : 0 2px 4px rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.35);
+
+  --global-base-color         : var(--accent-primary);
+  --global-bg-color           : #161a25;
+  --global-footer-bg-color    : #121520;
+  --global-border-color       : var(--surface-border);
+  --global-dark-border-color  : var(--surface-border);
+  --global-link-color         : var(--accent-primary);
+  --global-link-color-hover   : var(--accent-primary-strong);
+  --global-link-color-visited : var(--accent-primary);
+  --global-masthead-link-color       : #e6e8ef;
+  --global-masthead-link-color-hover : var(--accent-primary);
+  --global-text-color         : #e6e8ef;
+  --global-text-color-light   : #aab1c2;
+}
+
+/* Shared gradient used for small decorative bars */
+$accent-gradient: linear-gradient(90deg, var(--accent-primary), var(--accent-warm));
+
+/*
+   Masthead, titles and avatar
+   ========================================================================== */
+
+.masthead {
+  border-top: 4px solid transparent;
+  border-image: $accent-gradient 1;
+  border-image-width: 4px 0 0 0;
+}
+
+.page__title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-top: 0.35em;
+  border-radius: 2px;
+  background: $accent-gradient;
+}
+
+.author__avatar img {
+  padding: 4px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-warm));
+}
+
+/*
+   Publication and talk cards
+   ========================================================================== */
+
+.archive > h2 {
+  margin: 1.75em 0 0.75em;
+  border-bottom: none;
+  color: var(--accent-primary);
+  font-size: $type-size-5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  + hr {
+    display: none;
+  }
+}
+
+.archive .list__item .archive__item {
+  margin-bottom: 1em;
+  padding: 1em 1.25em;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+    font-size: $type-size-4;
+    line-height: 1.35;
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--accent-primary);
+      }
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.archive__item-links a {
+  display: inline-block;
+  padding: 0.15em 0.85em;
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent-primary);
+  font-size: $type-size-6;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--accent-primary);
+    color: var(--surface);
+  }
+}
+
+/* Talks: type badge, date and venue */
+.talk__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0 0 0.35em;
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.talk__venue {
+  margin: 0;
+  font-size: $type-size-5;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1em 0.7em;
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent-primary);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge--poster {
+  background: var(--accent-warm-tint);
+  color: var(--accent-warm);
+}
+
+/*
+   Homepage
+   ========================================================================== */
+
+.home-hero {
+  margin-bottom: 2em;
+  padding: 1.5em 1.75em;
+  background: linear-gradient(135deg, var(--accent-tint), var(--accent-warm-tint));
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.home-hero__eyebrow {
+  margin: 0 0 0.5em;
+  color: var(--accent-primary);
+  font-size: $type-size-6;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-section {
+  margin: 1.75em 0 0.75em;
+  border-bottom: none;
+  font-size: $type-size-5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0.3em 0.9em;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 999px;
+    font-size: $type-size-6;
+  }
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1em;
+}
+
+.home-card {
+  display: block;
+  padding: 1.1em 1.2em;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-top: 4px solid var(--card-accent, var(--accent-primary));
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    color: var(--global-text-color);
+  }
+
+  &:visited {
+    color: var(--global-text-color);
+  }
+}
+
+.home-card--warm { --card-accent: var(--accent-warm); }
+.home-card--teal { --card-accent: var(--accent-teal); }
+
+.home-card__num {
+  display: block;
+  color: var(--card-accent, var(--accent-primary));
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.home-card__label {
+  display: block;
+  font-weight: bold;
+}
+
+.home-card__desc {
+  display: block;
+  margin-top: 0.25em;
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+}
+
+.home-recent {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0 0 0.75em;
+    padding-left: 1em;
+    border-left: 3px solid var(--accent-warm);
+  }
+}
+
+.home-recent a {
+  color: var(--global-text-color);
+  font-weight: bold;
+
+  &:hover {
+    color: var(--accent-primary);
+  }
+}
+
+/* the theme underlines every link in page content; cards and lists here don't need it */
+.page__content {
+  .home-card,
+  .home-card:hover,
+  .home-recent a,
+  .home-recent a:hover {
+    text-decoration: none;
+  }
+}
+
+.home-recent__meta {
+  display: block;
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+}
