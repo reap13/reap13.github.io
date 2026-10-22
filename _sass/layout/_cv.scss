@@ -1,0 +1,76 @@
+/* ==========================================================================
+   CV
+   ========================================================================== */
+
+.cv {
+  line-height: 1.5;
+
+  ul,
+  ol {
+    margin-top: 0.25em;
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-bottom: 0.25em;
+  }
+}
+
+.cv .cv__section {
+  margin: 2em 0 0.75em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--global-text-color);
+  font-size: $type-size-5;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cv__entry {
+  margin-bottom: 1.25em;
+}
+
+/* name and place on the left, dates on the right */
+.cv__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 1em;
+}
+
+.cv__sub {
+  margin-top: 0.4em;
+  padding-left: 0.75em;
+}
+
+.cv__date {
+  font-style: italic;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.cv__role {
+  font-style: italic;
+}
+
+.cv__details {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  margin: 0.4em 0 0 0.75em;
+
+  dt {
+    margin: 0;
+    font-size: inherit;
+    font-weight: normal;
+  }
+
+  dd {
+    margin: 0 0 0.25em;
+    font-size: inherit;
+  }
+}
+
+.cv__refs,
+.cv__skills {
+  padding-left: 1.25em;
+}
