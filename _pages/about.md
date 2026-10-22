@@ -27,17 +27,14 @@ redirect_from:
 
 <div class="home-cards">
   <a class="home-card" href="{{ base_path }}/publications/">
-    <span class="home-card__num">{{ site.publications.size }}</span>
     <span class="home-card__label">Publications</span>
     <span class="home-card__desc">Journal articles and a book</span>
   </a>
   <a class="home-card home-card--warm" href="{{ base_path }}/talks/">
-    <span class="home-card__num">{{ site.talks.size }}</span>
     <span class="home-card__label">Talks &amp; posters</span>
     <span class="home-card__desc">Conference presentations</span>
   </a>
   <a class="home-card home-card--teal" href="{{ base_path }}/cv/">
-    <span class="home-card__num">CV</span>
     <span class="home-card__label">Curriculum vitae</span>
     <span class="home-card__desc">Education, research, teaching and leadership</span>
   </a>

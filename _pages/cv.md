@@ -170,12 +170,11 @@ redirect_from:
   </ul>
 </div>
 
-<h2 class="cv__section">Skills and Interests</h2>
+<h2 class="cv__section">Skills</h2>
 
 <ul class="cv__skills">
   <li><strong>Technical Skills:</strong> R, Python, REDCap, MATLAB, SPSS, Microsoft Office</li>
   <li><strong>Language Skills:</strong> English, Hindi, French</li>
-  <li><strong>Clubs/Extra-curriculars:</strong> The Jefferson Literary and Debating Society, Philosophy Club</li>
 </ul>
 
 </div>

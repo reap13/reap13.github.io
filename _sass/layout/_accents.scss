@@ -266,17 +266,12 @@ $accent-gradient: linear-gradient(90deg, var(--accent-primary), var(--accent-war
 .home-card--warm { --card-accent: var(--accent-warm); }
 .home-card--teal { --card-accent: var(--accent-teal); }
 
-.home-card__num {
-  display: block;
-  color: var(--card-accent, var(--accent-primary));
-  font-size: 2em;
-  font-weight: bold;
-  line-height: 1.1;
-}
-
 .home-card__label {
   display: block;
+  color: var(--card-accent, var(--accent-primary));
+  font-size: $type-size-4;
   font-weight: bold;
+  line-height: 1.25;
 }
 
 .home-card__desc {
