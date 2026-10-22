@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Rea Pillai / About"
+title                    : "Rea Pillai"
 title_separator          : "-"
 name                     : &name "Rea Pillai"
 description              : &description "Rea Pillai's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
