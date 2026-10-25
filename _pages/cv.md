@@ -15,7 +15,7 @@ redirect_from:
 
 <div class="cv__entry">
   <div class="cv__head"><span><strong>University of Virginia</strong>, College of Arts and Sciences, Charlottesville, VA</span></div>
-  <div class="cv__head cv__sub"><span>Ph.D. in <em>Psychology</em> – Quantitative Psychology</span><span class="cv__date">August 2026 – May 2032</span></div>
+  <div class="cv__head cv__sub"><span>Ph.D. in <em>Psychology</em> – Quantitative Psychology</span><span class="cv__date">August 2026 – May 2031</span></div>
   <div class="cv__head cv__sub"><span>M.A. in <em>Psychology</em> – Quantitative Psychology (concurrent degree with Ph.D.)</span></div>
   <div class="cv__head cv__sub"><span>B.A. in <em>Psychology</em> – Distinguished Majors Program<br>Minor in <em>Data Science</em></span><span class="cv__date">August 2023 – May 2026</span></div>
   <dl class="cv__details">
