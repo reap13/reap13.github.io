@@ -26,8 +26,8 @@
 @function base-conversion($value) {
   $unit: unit($value);
 
-  @if $unit == 'px' {
-      @return math.div($value, 16px) * 1em;
+    @if $unit == 'px' {
+    @return math.div($value, 16px) * 1em;
   }
   @else if $unit == '%' {
     @return math.div($value, 100%) * 1em;
