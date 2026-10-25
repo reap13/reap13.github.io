@@ -27,7 +27,7 @@
   $unit: unit($value);
 
   @if $unit == 'px' {
-    @return ($value / 16) * 1em;
+      @return math.div($value, 16px) * 1em;
   }
   @else if $unit == '%' {
     @return math.div($value, 100%) * 1em;
